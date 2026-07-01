@@ -98,7 +98,9 @@ function buildMatchRow(m) {
 
   const teams = document.createElement('span');
   teams.className = 'match-teams';
-  teams.textContent = `${m.home} vs ${m.away}`;
+  const homeFlag = (typeof getFlag === 'function' && getFlag(m.home)) || '';
+  const awayFlag = (typeof getFlag === 'function' && getFlag(m.away)) || '';
+  teams.textContent = `${homeFlag ? homeFlag + ' ' : ''}${m.home} vs ${awayFlag ? awayFlag + ' ' : ''}${m.away}`;
 
   const scoreText = formatScore(m);
   const score = document.createElement('span');
@@ -108,7 +110,9 @@ function buildMatchRow(m) {
   const meta = document.createElement('span');
   meta.className = 'match-meta';
   const dateLabel = formatDate(m.date);
-  meta.textContent = [dateLabel, m.venue].filter(Boolean).join(' · ');
+  const metaParts = [dateLabel, m.venue];
+  if (m.note) metaParts.push(m.note);
+  meta.textContent = metaParts.filter(Boolean).join(' · ');
 
   info.appendChild(num);
   info.appendChild(teams);

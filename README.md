@@ -2,14 +2,17 @@
 
 A single-page site to check off every World Cup match you've watched. Your progress is saved in your browser (`localStorage`) — no backend, no account, nothing to install.
 
+Match data is filled in with real results through the Round of 32 (as of July 1, 2026) — group stage is complete, several knockout matches are done, and the rest of the bracket uses "Winner Match X" placeholders until those games are decided.
+
 ## Files
 
 ```
-index.html    the page structure
-style.css     all visual styling
-script.js     app logic (rendering, checkboxes, progress, saving) — you shouldn't need to touch this
-matches.js    the 104-match dataset — this is the file you edit
-README.md     this file
+index.html      the page structure
+style.css       all visual styling
+script.js       app logic (rendering, checkboxes, progress, saving, flags) — you shouldn't need to touch this
+matches.js      the 104-match dataset — this is the file you edit as results come in
+flags.js        country name -> flag emoji lookup — edit if a team name doesn't show a flag
+README.md       this file
 ```
 
 ## Updating match data
@@ -18,7 +21,7 @@ Open `matches.js`. Every match is an object like this:
 
 ```js
 {
-  id: "ga-1",
+  id: "m1",
   matchNumber: 1,
   stage: "Group Stage",
   group: "Group A",
@@ -26,26 +29,36 @@ Open `matches.js`. Every match is an object like this:
   date: "2026-06-11",
   venue: "Estadio Azteca, Mexico City",
   home: "Mexico",
-  away: "Poland",
-  homeScore: null,
-  awayScore: null
+  away: "South Africa",
+  homeScore: 2,
+  awayScore: 0,
+  note: null
 }
 ```
 
 To update a match:
-- Change `home` / `away` to the real team names as they're confirmed.
-- Fill in `date` and `venue` once known.
-- Once the match is played, set `homeScore` and `awayScore` to numbers (e.g. `2` and `1`). Leave them as `null` for matches that haven't happened yet — the app will show "vs" instead of a score.
+- Change `home` / `away` — for knockout matches not yet decided, these are placeholders like `"Winner Match 93"`. Once that earlier match finishes, replace the placeholder with the real team name (e.g. `"Spain"`) and its flag will show up automatically.
+- Set `homeScore` / `awayScore` once the match is played. Leave them as `null` for matches that haven't happened yet.
+- `note` is optional — used for things like `"Morocco won 3-2 on penalties"`. Set it to `null` if there's nothing to add.
+- `venue` is `"TBD"` for most group-stage matches since exact per-match stadium assignments weren't part of this build — fill it in from the official schedule if you want it.
 
-**Don't change `id` once you've started ticking boxes.** The `id` is the key the app uses to remember which matches you've watched, so changing it will make the app forget that match was checked. Everything else is safe to edit freely.
+**Don't change `id` once you've started ticking boxes.** The `id` is the key the app uses to remember which matches you've watched — changing it will make the app forget that match was checked. Everything else is safe to edit freely.
 
-The file is currently filled with placeholder names (`A1`, `A2`, `R32 Team 1`, etc.) — it's already structured with the correct 104-match format (72 group stage + 16 Round of 32 + 8 Round of 16 + 4 quarterfinals + 2 semifinals + 3rd place + final), so you can replace the placeholders in place as the real fixture list and results are confirmed.
+## Flags
+
+Flags are looked up automatically in `flags.js` by matching the team name in `matches.js` exactly. If you type a team name that isn't in the list (a different spelling, a newly-decided knockout team, etc.), no flag will show — just add a line to `flags.js` in the same format:
+
+```js
+"Wales": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+```
+
+Placeholder names like `"Winner Match 93"` intentionally show no flag — that's expected until you replace them with a real team.
 
 ## Hosting on GitHub Pages
 
 1. **Create a new repository** on GitHub (e.g. `world-cup-2026-tracker`). Public repos get free GitHub Pages hosting.
 2. **Add these files** to the repository — either:
-   - drag and drop `index.html`, `style.css`, `script.js`, and `matches.js` into the GitHub web UI and commit, or
+   - drag and drop `index.html`, `style.css`, `script.js`, `matches.js`, and `flags.js` into the GitHub web UI and commit, or
    - clone the empty repo locally, copy the files in, then:
      ```bash
      git add .
