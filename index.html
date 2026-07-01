@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 — Watch Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stadium-glow" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">MATCHDAY TRACKER</p>
+    <h1 class="title">World Cup <span class="title-year">2026</span></h1>
+    <p class="subtitle">Every match, from kickoff to the final whistle. Tick off what you've watched.</p>
+  </div>
+</header>
+
+<section class="scoreboard" aria-label="Progress tracker">
+  <div class="scoreboard-inner">
+    <div class="scoreboard-panel">
+      <span class="scoreboard-label">Matches Watched</span>
+      <div class="flip-display" id="flip-display" aria-live="polite">
+        <span class="flip-digits" id="watched-count">000</span>
+        <span class="flip-sep">/</span>
+        <span class="flip-digits" id="total-count">104</span>
+      </div>
+    </div>
+    <div class="scoreboard-bar-wrap">
+      <div class="scoreboard-bar-track">
+        <div class="scoreboard-bar-fill" id="progress-fill"></div>
+      </div>
+      <span class="scoreboard-pct" id="progress-pct">0%</span>
+    </div>
+  </div>
+</section>
+
+<nav class="stage-nav" id="stage-nav" aria-label="Jump to stage"></nav>
+
+<main class="pitch" id="match-container">
+  <!-- Match groups are rendered here by script.js -->
+</main>
+
+<footer class="site-footer">
+  <p>Data lives entirely in your browser (<code>localStorage</code>). Edit <code>matches.js</code> to update teams, scores and venues.</p>
+</footer>
+
+<script src="matches.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
