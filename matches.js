@@ -1139,9 +1139,9 @@ const WORLD_CUP_MATCHES = [
     venue: "Estadio Azteca, Mexico City",
     home: "Mexico",
     away: "Ecuador",
-    homeScore: null,
-    awayScore: null,
-    note: "In progress"
+    homeScore: 2,
+    awayScore: 0,
+    note: null
   },
   {
     id: "m80",
@@ -1153,8 +1153,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Mercedes-Benz Stadium, Atlanta",
     home: "England",
     away: "DR Congo",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 2,
+    awayScore: 1,
     note: null
   },
   {
@@ -1167,8 +1167,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Levi's Stadium, Santa Clara, California",
     home: "USA",
     away: "Bosnia and Herzegovina",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 2,
+    awayScore: 0,
     note: null
   },
   {
@@ -1181,8 +1181,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Lumen Field, Seattle",
     home: "Belgium",
     away: "Senegal",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 3,
+    awayScore: 2,
     note: null
   },
   {
@@ -1195,8 +1195,8 @@ const WORLD_CUP_MATCHES = [
     venue: "BMO Field, Toronto",
     home: "Portugal",
     away: "Croatia",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 2,
+    awayScore: 1,
     note: null
   },
   {
@@ -1209,8 +1209,8 @@ const WORLD_CUP_MATCHES = [
     venue: "SoFi Stadium, Inglewood, California",
     home: "Spain",
     away: "Austria",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 3,
+    awayScore: 0,
     note: null
   },
   {
@@ -1223,8 +1223,8 @@ const WORLD_CUP_MATCHES = [
     venue: "BC Place, Vancouver",
     home: "Switzerland",
     away: "Algeria",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 2,
+    awayScore: 0,
     note: null
   },
   {
@@ -1237,9 +1237,9 @@ const WORLD_CUP_MATCHES = [
     venue: "AT&T Stadium, Arlington, Texas",
     home: "Australia",
     away: "Egypt",
-    homeScore: null,
-    awayScore: null,
-    note: null
+    homeScore: 1,
+    awayScore: 1,
+    note: "Egypt won 4-2 on penalties"
   },
   {
     id: "m87",
@@ -1251,8 +1251,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Hard Rock Stadium, Miami Gardens",
     home: "Argentina",
     away: "Cape Verde",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 3,
+    awayScore: 2,
     note: null
   },
   {
@@ -1265,8 +1265,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Arrowhead Stadium, Kansas City",
     home: "Colombia",
     away: "Ghana",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 1,
+    awayScore: 0,
     note: null
   },
 
@@ -1280,7 +1280,7 @@ const WORLD_CUP_MATCHES = [
     date: "2026-07-04",
     venue: "Lincoln Financial Field, Philadelphia",
     home: "Paraguay",
-    away: "Winner Match 77 (France/Sweden)",
+    away: "France",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1308,7 +1308,7 @@ const WORLD_CUP_MATCHES = [
     date: "2026-07-05",
     venue: "MetLife Stadium, East Rutherford, New Jersey",
     home: "Brazil",
-    away: "Winner Match 78 (Ivory Coast/Norway)",
+    away: "Norway",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1321,8 +1321,8 @@ const WORLD_CUP_MATCHES = [
     round: "Round of 16",
     date: "2026-07-05",
     venue: "Estadio Azteca, Mexico City",
-    home: "Winner Match 79 (Mexico/Ecuador)",
-    away: "Winner Match 80 (England/DR Congo)",
+    home: "Mexico",
+    away: "England",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1335,8 +1335,8 @@ const WORLD_CUP_MATCHES = [
     round: "Round of 16",
     date: "2026-07-06",
     venue: "AT&T Stadium, Arlington, Texas",
-    home: "Winner Match 83 (Portugal/Croatia)",
-    away: "Winner Match 84 (Spain/Austria)",
+    home: "Portugal",
+    away: "Spain",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1349,8 +1349,8 @@ const WORLD_CUP_MATCHES = [
     round: "Round of 16",
     date: "2026-07-06",
     venue: "Lumen Field, Seattle",
-    home: "Winner Match 81 (USA/Bosnia and Herzegovina)",
-    away: "Winner Match 82 (Belgium/Senegal)",
+    home: "USA",
+    away: "Belgium",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1363,8 +1363,8 @@ const WORLD_CUP_MATCHES = [
     round: "Round of 16",
     date: "2026-07-07",
     venue: "Mercedes-Benz Stadium, Atlanta",
-    home: "Winner Match 86 (Argentina/Cape Verde)",
-    away: "Winner Match 88 (Australia/Egypt)",
+    home: "Argentina",
+    away: "Egypt",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1377,8 +1377,8 @@ const WORLD_CUP_MATCHES = [
     round: "Round of 16",
     date: "2026-07-07",
     venue: "BC Place, Vancouver",
-    home: "Winner Match 85 (Switzerland/Algeria)",
-    away: "Winner Match 87 (Colombia/Ghana)",
+    home: "Switzerland",
+    away: "Colombia",
     homeScore: null,
     awayScore: null,
     note: null
