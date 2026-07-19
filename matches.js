@@ -1281,8 +1281,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Lincoln Financial Field, Philadelphia",
     home: "Paraguay",
     away: "France",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 0,
+    awayScore: 1,
     note: null
   },
   {
@@ -1295,8 +1295,8 @@ const WORLD_CUP_MATCHES = [
     venue: "NRG Stadium, Houston",
     home: "Canada",
     away: "Morocco",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 0,
+    awayScore: 3,
     note: null
   },
   {
@@ -1309,8 +1309,8 @@ const WORLD_CUP_MATCHES = [
     venue: "MetLife Stadium, East Rutherford, New Jersey",
     home: "Brazil",
     away: "Norway",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 1,
+    awayScore: 2,
     note: null
   },
   {
@@ -1323,8 +1323,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Estadio Azteca, Mexico City",
     home: "Mexico",
     away: "England",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 2,
+    awayScore: 3,
     note: null
   },
   {
@@ -1337,8 +1337,8 @@ const WORLD_CUP_MATCHES = [
     venue: "AT&T Stadium, Arlington, Texas",
     home: "Portugal",
     away: "Spain",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 0,
+    awayScore: 1,
     note: null
   },
   {
@@ -1351,8 +1351,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Lumen Field, Seattle",
     home: "USA",
     away: "Belgium",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 1,
+    awayScore: 4,
     note: null
   },
   {
@@ -1365,8 +1365,8 @@ const WORLD_CUP_MATCHES = [
     venue: "Mercedes-Benz Stadium, Atlanta",
     home: "Argentina",
     away: "Egypt",
-    homeScore: null,
-    awayScore: null,
+    homeScore: 3,
+    awayScore: 2,
     note: null
   },
   {
@@ -1379,9 +1379,9 @@ const WORLD_CUP_MATCHES = [
     venue: "BC Place, Vancouver",
     home: "Switzerland",
     away: "Colombia",
-    homeScore: null,
-    awayScore: null,
-    note: null
+    homeScore: 0,
+    awayScore: 0,
+    note: "Switzerland won 4-3 on penalties"
   },
 
   // ---------------- QUARTERFINAL ----------------
@@ -1393,10 +1393,10 @@ const WORLD_CUP_MATCHES = [
     round: "Quarterfinal",
     date: "2026-07-09",
     venue: "Gillette Stadium, Foxborough, Massachusetts",
-    home: "Winner Match 89",
-    away: "Winner Match 90",
-    homeScore: null,
-    awayScore: null,
+    home: "France",
+    away: "Morocco",
+    homeScore: 2,
+    awayScore: 0,
     note: null
   },
   {
@@ -1407,10 +1407,10 @@ const WORLD_CUP_MATCHES = [
     round: "Quarterfinal",
     date: "2026-07-10",
     venue: "SoFi Stadium, Inglewood, California",
-    home: "Winner Match 93",
-    away: "Winner Match 94",
-    homeScore: null,
-    awayScore: null,
+    home: "Spain",
+    away: "Belgium",
+    homeScore: 2,
+    awayScore: 1,
     note: null
   },
   {
@@ -1421,10 +1421,10 @@ const WORLD_CUP_MATCHES = [
     round: "Quarterfinal",
     date: "2026-07-11",
     venue: "Hard Rock Stadium, Miami Gardens",
-    home: "Winner Match 91",
-    away: "Winner Match 92",
-    homeScore: null,
-    awayScore: null,
+    home: "Norway",
+    away: "England",
+    homeScore: 1,
+    awayScore: 2,
     note: null
   },
   {
@@ -1435,10 +1435,10 @@ const WORLD_CUP_MATCHES = [
     round: "Quarterfinal",
     date: "2026-07-11",
     venue: "Arrowhead Stadium, Kansas City",
-    home: "Winner Match 95",
-    away: "Winner Match 96",
-    homeScore: null,
-    awayScore: null,
+    home: "Argentina",
+    away: "Switzerland",
+    homeScore: 3,
+    awayScore: 1,
     note: null
   },
 
@@ -1451,10 +1451,10 @@ const WORLD_CUP_MATCHES = [
     round: "Semifinal",
     date: "2026-07-14",
     venue: "AT&T Stadium, Arlington, Texas",
-    home: "Winner Match 97",
-    away: "Winner Match 98",
-    homeScore: null,
-    awayScore: null,
+    home: "France",
+    away: "Spain",
+    homeScore: 0,
+    awayScore: 2,
     note: null
   },
   {
@@ -1465,10 +1465,10 @@ const WORLD_CUP_MATCHES = [
     round: "Semifinal",
     date: "2026-07-15",
     venue: "Mercedes-Benz Stadium, Atlanta",
-    home: "Winner Match 99",
-    away: "Winner Match 100",
-    homeScore: null,
-    awayScore: null,
+    home: "England",
+    away: "Argentina",
+    homeScore: 1,
+    awayScore: 2,
     note: null
   },
 
@@ -1481,8 +1481,8 @@ const WORLD_CUP_MATCHES = [
     round: "Third Place Playoff",
     date: "2026-07-18",
     venue: "Hard Rock Stadium, Miami Gardens",
-    home: "Loser Match 101",
-    away: "Loser Match 102",
+    home: "France",
+    away: "England",
     homeScore: null,
     awayScore: null,
     note: null
@@ -1497,8 +1497,8 @@ const WORLD_CUP_MATCHES = [
     round: "Final",
     date: "2026-07-19",
     venue: "MetLife Stadium, East Rutherford, New Jersey",
-    home: "Winner Match 101",
-    away: "Winner Match 102",
+    home: "Spain",
+    away: "Argentina",
     homeScore: null,
     awayScore: null,
     note: null
